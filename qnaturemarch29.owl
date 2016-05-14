@@ -1,0 +1,3306 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY QuranicOntology "http://www.semanticweb.org/iiuc/QuranicOntology#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/soyeb/QuranicOntology#"
+     xml:base="http://www.semanticweb.org/soyeb/QuranicOntology"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:QuranicOntology="http://www.semanticweb.org/iiuc/QuranicOntology#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/iiuc/QuranicOntology">
+        <rdfs:comment>Ontology dealing with the nature aspect of Quran</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#ancestorOf -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;ancestorOf">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <owl:inverseOf rdf:resource="&QuranicOntology;descendantOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#areA -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;areA">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="&QuranicOntology;Allah"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#askedRepentanceBy -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;askedRepentanceBy">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="&QuranicOntology;Allah"/>
+        <rdfs:subPropertyOf rdf:resource="&QuranicOntology;repentedTo"/>
+        <owl:inverseOf rdf:resource="&QuranicOntology;repentedTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#belongTo -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;belongTo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#brotherOf -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;brotherOf">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#burstFrom -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;burstFrom"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#causedBy&apos; -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;causedBy&apos;">
+        <owl:inverseOf rdf:resource="&QuranicOntology;causes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#causes -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;causes"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#childOf -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;childOf">
+        <owl:inverseOf rdf:resource="&QuranicOntology;fatherOf"/>
+        <owl:inverseOf rdf:resource="&QuranicOntology;motherOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#chose -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;chose"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#comesOutof -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;comesOutof"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#controls -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;controls">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="&QuranicOntology;Allah"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#created -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;created">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="&QuranicOntology;Allah"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#denied -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;denied"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#descendantOf -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;descendantOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#desire -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;desire"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#disbelieved -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;disbelieved">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="&QuranicOntology;Allah"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#drowned -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;drowned">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="&QuranicOntology;Allah"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#enjoymentOf -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;enjoymentOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#fatherOf -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;fatherOf">
+        <rdfs:subPropertyOf rdf:resource="&QuranicOntology;ancestorOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#favored -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;favored"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#formedIn -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;formedIn"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#gives -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;gives"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#givesLifeto -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;givesLifeto"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#gushedFrom -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;gushedFrom">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#hasDominionOver -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;hasDominionOver">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="&QuranicOntology;Allah"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#hasPart -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;hasPart"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#isA -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;isA">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#isPartof -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;isPartof">
+        <owl:inverseOf rdf:resource="&QuranicOntology;hasPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#killed -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;killed"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#madeAppoinmentWith -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;madeAppoinmentWith">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="&QuranicOntology;Allah"/>
+        <owl:inverseOf rdf:resource="&QuranicOntology;wasAppointedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#madeCeilingBy -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;madeCeilingBy">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="&QuranicOntology;Allah"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#madeHumansAs -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;madeHumansAs">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="&QuranicOntology;Allah"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#measuredBy -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;measuredBy">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&QuranicOntology;usedToMeasure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#mentionsAbout -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;mentionsAbout">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="&QuranicOntology;Allah"/>
+        <rdfs:range rdf:resource="&QuranicOntology;Miracle"/>
+        <rdfs:domain rdf:resource="&QuranicOntology;QuranicVerse"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#motherOf -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;motherOf">
+        <rdfs:subPropertyOf rdf:resource="&QuranicOntology;ancestorOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#originated -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;originated"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#originatedBy -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;originatedBy">
+        <owl:inverseOf rdf:resource="&QuranicOntology;originated"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#parted -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;parted">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="&QuranicOntology;Allah"/>
+        <owl:inverseOf rdf:resource="&QuranicOntology;wasPartedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#prayedFor -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;prayedFor">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#producedBy -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;producedBy">
+        <owl:inverseOf rdf:resource="&QuranicOntology;produces"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#produces -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;produces"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#provide -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;provide">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#punished -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;punished">
+        <owl:inverseOf rdf:resource="&QuranicOntology;werePunishedby"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#raised -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;raised"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#raises -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;raises"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#repentedTo -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;repentedTo">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="&QuranicOntology;Allah"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#risesFrom -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;risesFrom"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#sailsThrough -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;sailsThrough">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#saved -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;saved"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#secured -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;secured">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="&QuranicOntology;Allah"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#sends -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;sends">
+        <owl:inverseOf rdf:resource="&QuranicOntology;sentBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#sendsProvisionAs -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;sendsProvisionAs">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="&QuranicOntology;Allah"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#sent -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;sent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#sentAsProvisionBy -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;sentAsProvisionBy">
+        <rdfs:range rdf:resource="&QuranicOntology;Allah"/>
+        <rdfs:subPropertyOf rdf:resource="&QuranicOntology;sendsProvisionAs"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#sentBy -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;sentBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#sentDown -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;sentDown">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="&QuranicOntology;Allah"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#sentFrom -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;sentFrom"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#setsIn -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;setsIn"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#shaded -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;shaded">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="&QuranicOntology;Allah"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#slaughtered -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;slaughtered"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#striked -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;striked">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="&QuranicOntology;Miracle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#swallowed -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;swallowed">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="&QuranicOntology;Miracle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#toEatFrom -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;toEatFrom">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#tookcareOf -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;tookcareOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#trialed -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;trialed">
+        <owl:inverseOf rdf:resource="&QuranicOntology;wasTrialedby"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#trials -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;trials"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#usedToMeasure -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;usedToMeasure">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <owl:inverseOf rdf:resource="&QuranicOntology;measuredBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#wasAppointedBy -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;wasAppointedBy">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="&QuranicOntology;Allah"/>
+        <rdfs:subPropertyOf rdf:resource="&QuranicOntology;madeAppoinmentWith"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#wasControlledBy -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;wasControlledBy">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="&QuranicOntology;Allah"/>
+        <rdfs:subPropertyOf rdf:resource="&QuranicOntology;controls"/>
+        <owl:inverseOf rdf:resource="&QuranicOntology;controls"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#wasCreatedby -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;wasCreatedby">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <owl:inverseOf rdf:resource="&QuranicOntology;created"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#wasPartedBy -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;wasPartedBy">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="&QuranicOntology;Allah"/>
+        <rdfs:subPropertyOf rdf:resource="&QuranicOntology;parted"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#wasSentDownBy -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;wasSentDownBy">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="&QuranicOntology;Allah"/>
+        <owl:inverseOf rdf:resource="&QuranicOntology;sentDown"/>
+        <rdfs:subPropertyOf rdf:resource="&QuranicOntology;sentDown"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#wasSentto -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;wasSentto"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#wasStrikedBy -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;wasStrikedBy">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="&QuranicOntology;Miracle"/>
+        <owl:inverseOf rdf:resource="&QuranicOntology;striked"/>
+        <rdfs:subPropertyOf rdf:resource="&QuranicOntology;striked"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#wasSwallowedBy -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;wasSwallowedBy">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="&QuranicOntology;Miracle"/>
+        <owl:inverseOf rdf:resource="&QuranicOntology;swallowed"/>
+        <rdfs:subPropertyOf rdf:resource="&QuranicOntology;swallowed"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#wasTrialedby -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;wasTrialedby"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#wasWorshippedby -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;wasWorshippedby">
+        <owl:inverseOf rdf:resource="&QuranicOntology;worshipped"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#wereControlledBy -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;wereControlledBy">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&QuranicOntology;controls"/>
+        <owl:inverseOf rdf:resource="&QuranicOntology;controls"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#wereCreatedby -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;wereCreatedby">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <owl:inverseOf rdf:resource="&QuranicOntology;created"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#wereDrownedBy -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;wereDrownedBy">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="&QuranicOntology;Allah"/>
+        <rdfs:subPropertyOf rdf:resource="&QuranicOntology;drowned"/>
+        <owl:inverseOf rdf:resource="&QuranicOntology;drowned"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#wereKilledby -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;wereKilledby">
+        <owl:inverseOf rdf:resource="&QuranicOntology;killed"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#werePunishedby -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;werePunishedby"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#wereShadedBy -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;wereShadedBy">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="&QuranicOntology;Allah"/>
+        <owl:inverseOf rdf:resource="&QuranicOntology;shaded"/>
+        <rdfs:subPropertyOf rdf:resource="&QuranicOntology;shaded"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#weresendby -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;weresendby">
+        <owl:inverseOf rdf:resource="&QuranicOntology;sent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#willReturnTo -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;willReturnTo">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="&QuranicOntology;Allah"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#worshipped -->
+
+    <owl:ObjectProperty rdf:about="&QuranicOntology;worshipped">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Allah -->
+
+    <owl:Class rdf:about="&QuranicOntology;Allah">
+        <rdfs:comment>Creator of heavens and earth;Has dominion over everything</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#AlterationofDay -->
+
+    <owl:Class rdf:about="&QuranicOntology;AlterationofDay">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;SignsofAllah"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#AlterationofNight -->
+
+    <owl:Class rdf:about="&QuranicOntology;AlterationofNight">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;SignsofAllah"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Animals -->
+
+    <owl:Class rdf:about="&QuranicOntology;Animals">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;BiologicalBeing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#AstronomicalBodies -->
+
+    <owl:Class rdf:about="&QuranicOntology;AstronomicalBodies">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranNature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#BiologicalBeing -->
+
+    <owl:Class rdf:about="&QuranicOntology;BiologicalBeing">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranNature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#BiologicalProcess -->
+
+    <owl:Class rdf:about="&QuranicOntology;BiologicalProcess">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranNature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Birds -->
+
+    <owl:Class rdf:about="&QuranicOntology;Birds">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;Animals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#BodyParts -->
+
+    <owl:Class rdf:about="&QuranicOntology;BodyParts">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;BiologicalBeing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#ChemicalElements -->
+
+    <owl:Class rdf:about="&QuranicOntology;ChemicalElements">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranNature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#ChildrenofIsrael -->
+
+    <owl:Class rdf:about="&QuranicOntology;ChildrenofIsrael">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;Nations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Cities -->
+
+    <owl:Class rdf:about="&QuranicOntology;Cities">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;HumanCreations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#CreationofEarth -->
+
+    <owl:Class rdf:about="&QuranicOntology;CreationofEarth">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;SignsofAllah"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#CreationofHeavens -->
+
+    <owl:Class rdf:about="&QuranicOntology;CreationofHeavens">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;SignsofAllah"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Death -->
+
+    <owl:Class rdf:about="&QuranicOntology;Death">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;BiologicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Directions -->
+
+    <owl:Class rdf:about="&QuranicOntology;Directions">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranNature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Donkey -->
+
+    <owl:Class rdf:about="&QuranicOntology;Donkey">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;Equidae"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Drinks -->
+
+    <owl:Class rdf:about="&QuranicOntology;Drinks">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Earth -->
+
+    <owl:Class rdf:about="&QuranicOntology;Earth">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;Elements"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Elements -->
+
+    <owl:Class rdf:about="&QuranicOntology;Elements">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranNature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Equidae -->
+
+    <owl:Class rdf:about="&QuranicOntology;Equidae">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;Mammals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Families -->
+
+    <owl:Class rdf:about="&QuranicOntology;Families">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;HumanBeing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Fish -->
+
+    <owl:Class rdf:about="&QuranicOntology;Fish">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;Miracle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Food -->
+
+    <owl:Class rdf:about="&QuranicOntology;Food">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranNature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#ForbiddenFood -->
+
+    <owl:Class rdf:about="&QuranicOntology;ForbiddenFood">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Fruits -->
+
+    <owl:Class rdf:about="&QuranicOntology;Fruits">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#GreenHerbs -->
+
+    <owl:Class rdf:about="&QuranicOntology;GreenHerbs">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;TreesandPlants"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Heavens -->
+
+    <owl:Class rdf:about="&QuranicOntology;Heavens">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranNature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Hills -->
+
+    <owl:Class rdf:about="&QuranicOntology;Hills">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;LandForms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Horses -->
+
+    <owl:Class rdf:about="&QuranicOntology;Horses">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;Equidae"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#HumanBeing -->
+
+    <owl:Class rdf:about="&QuranicOntology;HumanBeing">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;BiologicalBeing"/>
+        <rdfs:comment>Similar situations [as yours] have passed on before you, so proceed throughout the earth and observe how was the end of those who denied.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#HumanCreations -->
+
+    <owl:Class rdf:about="&QuranicOntology;HumanCreations">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranNature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#LandForms -->
+
+    <owl:Class rdf:about="&QuranicOntology;LandForms">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranNature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Life -->
+
+    <owl:Class rdf:about="&QuranicOntology;Life">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;BiologicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Mammals -->
+
+    <owl:Class rdf:about="&QuranicOntology;Mammals">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;Animals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#MeasurementofTime -->
+
+    <owl:Class rdf:about="&QuranicOntology;MeasurementofTime">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranNature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Men -->
+
+    <owl:Class rdf:about="&QuranicOntology;Men">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;HumanBeing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Miracle -->
+
+    <owl:Class rdf:about="&QuranicOntology;Miracle"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Mounts -->
+
+    <owl:Class rdf:about="&QuranicOntology;Mounts">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;LandForms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#MovementofCloud -->
+
+    <owl:Class rdf:about="&QuranicOntology;MovementofCloud">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;SignsofAllah"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#MovementofCreatures -->
+
+    <owl:Class rdf:about="&QuranicOntology;MovementofCreatures">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;SignsofAllah"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#MovementofWInd -->
+
+    <owl:Class rdf:about="&QuranicOntology;MovementofWInd">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;SignsofAllah"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Nations -->
+
+    <owl:Class rdf:about="&QuranicOntology;Nations">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;HumanBeing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#NaturalDisasters -->
+
+    <owl:Class rdf:about="&QuranicOntology;NaturalDisasters">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranNature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#NaturalSatellites -->
+
+    <owl:Class rdf:about="&QuranicOntology;NaturalSatellites">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;AstronomicalBodies"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#PeopleofPharaoh -->
+
+    <owl:Class rdf:about="&QuranicOntology;PeopleofPharaoh">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;Nations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Planets -->
+
+    <owl:Class rdf:about="&QuranicOntology;Planets">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;AstronomicalBodies"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Prophets -->
+
+    <owl:Class rdf:about="&QuranicOntology;Prophets">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;HumanBeing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#PunishmentfromSky -->
+
+    <owl:Class rdf:about="&QuranicOntology;PunishmentfromSky">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;NaturalDisasters"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Quails -->
+
+    <owl:Class rdf:about="&QuranicOntology;Quails">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;Birds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#QuranNature -->
+
+    <owl:Class rdf:about="&QuranicOntology;QuranNature"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#QuranicVerse -->
+
+    <owl:Class rdf:about="&QuranicOntology;QuranicVerse"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Rivers -->
+
+    <owl:Class rdf:about="&QuranicOntology;Rivers">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranNature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Sheep -->
+
+    <owl:Class rdf:about="&QuranicOntology;Sheep">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;Ungulates"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#SignsofAllah -->
+
+    <owl:Class rdf:about="&QuranicOntology;SignsofAllah">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranNature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Sons -->
+
+    <owl:Class rdf:about="&QuranicOntology;Sons">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;HumanBeing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Stars -->
+
+    <owl:Class rdf:about="&QuranicOntology;Stars">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;AstronomicalBodies"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Stones -->
+
+    <owl:Class rdf:about="&QuranicOntology;Stones">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranNature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Suidae -->
+
+    <owl:Class rdf:about="&QuranicOntology;Suidae">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;Mammals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Swines -->
+
+    <owl:Class rdf:about="&QuranicOntology;Swines">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;Suidae"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#SymbolsofAllah -->
+
+    <owl:Class rdf:about="&QuranicOntology;SymbolsofAllah">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranNature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#TreesandPlants -->
+
+    <owl:Class rdf:about="&QuranicOntology;TreesandPlants">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;BiologicalBeing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Ungulates -->
+
+    <owl:Class rdf:about="&QuranicOntology;Ungulates">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;Mammals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:102 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:102">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:107 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:107">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>Do you not know that to Allah belongs the dominion of the heavens and the earth and [that] you have not besides Allah any protector or any helper?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:116 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:116">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>They say, &quot; Allah has taken a son.&quot; Exalted is He! Rather, to Him belongs whatever is in the heavens and the earth. All are devoutly obedient to Him,</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:117 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:117">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>Originator of the heavens and the earth. When He decrees a matter, He only says to it, &quot;Be,&quot; and it is.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:119 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:119">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>Indeed, We have sent you, [O Muhammad], with the truth as a bringer of good tidings and a warner, and you will not be asked about the companions of Hellfire.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:124 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:124">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>And [mention, O Muhammad], when Abraham was tried by his Lord with commands and he fulfilled them. [ Allah ] said, &quot;Indeed, I will make you a leader for the people.&quot; [Abraham] said, &quot;And of my descendants?&quot; [ Allah ] said, &quot;My covenant does not include the wrongdoers.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:126 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:126">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>And [mention] when Abraham said, &quot;My Lord, make this a secure city and provide its people with fruits - whoever of them believes in Allah and the Last Day.&quot; [ Allah ] said. &quot;And whoever disbelieves - I will grant him enjoyment for a little; then I will force him to the punishment of the Fire, and wretched is the destination.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:155 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:155">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>And [mention, O Muhammad], when Abraham was tried by his Lord with commands and he fulfilled them. [ Allah ] said, &quot;Indeed, I will make you a leader for the people.&quot; [Abraham] said, &quot;And of my descendants?&quot; [ Allah ] said, &quot;My covenant does not include the wrongdoers.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:158 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:158">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>Indeed, as-Safa and al-Marwah are among the symbols of Allah . So whoever makes Hajj to the House or performs &apos;umrah - there is no blame upon him for walking between them. And whoever volunteers good - then indeed, Allah is appreciative and Knowing.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:164 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:164">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>Indeed, in the creation of the heavens and earth, and the alternation of the night and the day, and the [great] ships which sail through the sea with that which benefits people, and what Allah has sent down from the heavens of rain, giving life thereby to the earth after its lifelessness and dispersing therein every [kind of] moving creature, and [His] directing of the winds and the clouds controlled between the heaven and the earth are signs for a people who use reason.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:171 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:171">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>The example of those who disbelieve is like that of one who shouts at what hears nothing but calls and cries cattle or sheep - deaf, dumb and blind, so they do not understand.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:173 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:173">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>He has only forbidden to you dead animals, blood, the flesh of swine, and that which has been dedicated to other than Allah . But whoever is forced [by necessity], neither desiring [it] nor transgressing [its limit], there is no sin upon him. Indeed, Allah is Forgiving and Merciful.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:189 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:189">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>They ask you, [O Muhammad], about the new moons. Say, &quot;They are measurements of time for the people and for Hajj.&quot; And it is not righteousness to enter houses from the back, but righteousness is [in] one who fears Allah. And enter houses from their doors. And fear Allah that you may succeed.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:198 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:198">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>There is no blame upon you for seeking bounty from your Lord [during Hajj]. But when you depart from &apos;Arafat, remember Allah at al- Mash&apos;ar al-Haram. And remember Him, as He has guided you, for indeed, you were before that among those astray.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:213 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:213">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>Mankind was [of] one religion [before their deviation]; then Allah sent the prophets as bringers of good tidings and warners and sent down with them the Scripture in truth to judge between the people concerning that in which they differed. And none differed over the Scripture except those who were given it - after the clear proofs came to them - out of jealous animosity among themselves. And Allah guided those who believed to the truth concerning that over which they had differed, by His permission. And Allah guides whom He wills to a straight path.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:22 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:22">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>[He] who made for you the earth a bed [spread out] and the sky a ceiling and sent down from the sky, rain and brought forth thereby fruits as provision for you. So do not attribute to Allah equals while you know [that there is nothing similar to Him].</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:258 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:258">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>Have you not considered the one who argued with Abraham about his Lord [merely] because Allah had given him kingship? When Abraham said, &quot;My Lord is the one who gives life and causes death,&quot; he said, &quot;I give life and cause death.&quot; Abraham said, &quot;Indeed, Allah brings up the sun from the east, so bring it up from the west.&quot; So the disbeliever was overwhelmed [by astonishment], and Allah does not guide the wrongdoing people.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:259 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:259">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>Or [consider such an example] as the one who passed by a township which had fallen into ruin. He said, &quot;How will Allah bring this to life after its death?&quot; So Allah caused him to die for a hundred years; then He revived him. He said, &quot;How long have you remained?&quot; The man said, &quot;I have remained a day or part of a day.&quot; He said, &quot;Rather, you have remained one hundred years. Look at your food and your drink; it has not changed with time. And look at your donkey; and We will make you a sign for the people. And look at the bones [of this donkey] - how We raise them and then We cover them with flesh.&quot; And when it became clear to him, he said, &quot;I know that Allah is over all things competent.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:284 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:284">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>To Allah belongs whatever is in the heavens and whatever is in the earth. Whether you show what is within yourselves or conceal it, Allah will bring you to account for it. Then He will forgive whom He wills and punish whom He wills, and Allah is over all things competent.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:29 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:29">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>It is He who created for you all of that which is on the earth. Then He directed Himself to the heaven, [His being above all creation], and made them seven heavens, and He is Knowing of all things.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:30 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:30">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>And [mention, O Muhammad], when your Lord said to the angels, &quot;Indeed, I will make upon the earth a successive authority.&quot; They said, &quot;Will You place upon it one who causes corruption therein and sheds blood, while we declare Your praise and sanctify You?&quot; Allah said, &quot;Indeed, I know that which you do not know.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:40 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:40">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>O Children of Israel, remember My favor which I have bestowed upon you and fulfill My covenant [upon you] that I will fulfill your covenant [from Me], and be afraid of [only] Me.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:47 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:47">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:49 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:49">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>And [recall] when We saved your forefathers from the people of Pharaoh, who afflicted you with the worst torment, slaughtering your [newborn] sons and keeping your females alive. And in that was a great trial from your Lord.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:50 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:50">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>And [recall] when We parted the sea for you and saved you and drowned the people of Pharaoh while you were looking on.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:51 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:51">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>And [recall] when We made an appointment with Moses for forty nights. Then you took [for worship] the calf after him, while you were wrongdoers.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:54 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:54">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>And [recall] when Moses said to his people, &quot;O my people, indeed you have wronged yourselves by your taking of the calf [for worship]. So repent to your Creator and kill yourselves. That is best for [all of] you in the sight of your Creator.&quot; Then He accepted your repentance; indeed, He is the Accepting of repentance, the Merciful.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:57 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:57">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>And We shaded you with clouds and sent down to you manna and quails, [saying], &quot;Eat from the good things with which We have provided you.&quot; And they wronged Us not - but they were [only] wronging themselves.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:59 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:59">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:60 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:60">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>And [recall] when Moses prayed for water for his people, so We said, &quot;Strike with your staff the stone.&quot; And there gushed forth from it twelve springs, and every people knew its watering place. &quot;Eat and drink from the provision of Allah , and do not commit abuse on the earth, spreading corruption.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:61 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:61">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>And [recall] when you said, &quot;O Moses, we can never endure one [kind of] food. So call upon your Lord to bring forth for us from the earth its green herbs and its cucumbers and its garlic and its lentils and its onions.&quot; [Moses] said, &quot;Would you exchange what is better for what is less? Go into [any] settlement and indeed, you will have what you have asked.&quot; And they were covered with humiliation and poverty and returned with anger from Allah [upon them]. That was because they [repeatedly] disbelieved in the signs of Allah and killed the prophets without right. That was because they disobeyed and were [habitually] transgressing.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:63 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:63">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>And [recall] when We took your covenant, [O Children of Israel, to abide by the Torah] and We raised over you the mount, [saying], &quot;Take what We have given you with determination and remember what is in it that perhaps you may become righteous.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:74 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:74">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>Then your hearts became hardened after that, being like stones or even harder. For indeed, there are stones from which rivers burst forth, and there are some of them that split open and water comes out, and there are some of them that fall down for fear of Allah . And Allah is not unaware of what you do.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:92 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:92">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>And Moses had certainly brought you clear proofs. Then you took the calf [in worship] after that, while you were wrongdoers.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:93 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse2:93">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>And [recall] when We took your covenant and raised over you the mount, [saying], &quot;Take what We have given you with determination and listen.&quot; They said [instead], &quot;We hear and disobey.&quot; And their hearts absorbed [the worship of] the calf because of their disbelief. Say, &quot;How wretched is that which your faith enjoins upon you, if you should be believers.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse37:142 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse37:142">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>Then the fish swallowed him, while he was blameworthy.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:109 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse3:109">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>To Allah belongs whatever is in the heavens and whatever is on the earth. And to Allah will [all] matters be returned.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:11 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse3:11">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>[Theirs is] like the custom of the people of Pharaoh and those before them. They denied Our signs, so Allah seized them for their sins. And Allah is severe in penalty.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:129 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse3:129">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>And to Allah belongs whatever is in the heavens and whatever is on the earth. He forgives whom He wills and punishes whom He wills. And Allah is Forgiving and Merciful.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:137 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse3:137">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>Similar situations [as yours] have passed on before you, so proceed throughout the earth and observe how was the end of those who denied.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:14 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse3:14">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>Beautified for people is the love of that which they desire - of women and sons, heaped-up sums of gold and silver, fine branded horses, and cattle and tilled land. That is the enjoyment of worldly life, but Allah has with Him the best return.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:180 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse3:180">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>And let not those who [greedily] withhold what Allah has given them of His bounty ever think that it is better for them. Rather, it is worse for them. Their necks will be encircled by what they withheld on the Day of Resurrection. And to Allah belongs the heritage of the heavens and the earth. And Allah , with what you do, is [fully] Acquainted.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:27 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse3:27">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>You cause the night to enter the day, and You cause the day to enter the night; and You bring the living out of the dead, and You bring the dead out of the living. And You give provision to whom You will without account.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:33 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse3:33">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>Indeed, Allah chose Adam and Noah and the family of Abraham and the family of &apos;Imran over the worlds -</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:34 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse3:34">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>Descendants, some of them from others. And Allah is Hearing and Knowing.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:36 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse3:36">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>But when she delivered her, she said, &quot;My Lord, I have delivered a female.&quot; And Allah was most knowing of what she delivered, &quot;And the male is not like the female. And I have named her Mary, and I seek refuge for her in You and [for] her descendants from Satan, the expelled [from the mercy of Allah ].&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:37 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse3:37">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>So her Lord accepted her with good acceptance and caused her to grow in a good manner and put her in the care of Zechariah. Every time Zechariah entered upon her in the prayer chamber, he found with her provision. He said, &quot;O Mary, from where is this [coming] to you?&quot; She said, &quot;It is from Allah . Indeed, Allah provides for whom He wills without account.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:39 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse3:39">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>So the angels called him while he was standing in prayer in the chamber, &quot;Indeed, Allah gives you good tidings of John, confirming a word from Allah and [who will be] honorable, abstaining [from women], and a prophet from among the righteous.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:45 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse3:45">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>[And mention] when the angels said, &quot;O Mary, indeed Allah gives you good tidings of a word from Him, whose name will be the Messiah, Jesus, the son of Mary - distinguished in this world and the Hereafter and among those brought near [to Allah ].</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:49 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse3:49">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:5 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse3:5">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>Indeed, from Allah nothing is hidden in the earth nor in the heaven.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:6 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse3:6">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>Indeed, from Allah nothing is hidden in the earth nor in the heaven.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:83 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse3:83">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>So is it other than the religion of Allah they desire, while to Him have submitted [all] those within the heavens and earth, willingly or by compulsion, and to Him they will be returned?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:84 -->
+
+    <owl:Class rdf:about="&QuranicOntology;Verse3:84">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranicVerse"/>
+        <rdfs:comment>Say, &quot;We have believed in Allah and in what was revealed to us and what was revealed to Abraham, Ishmael, Isaac, Jacob, and the Descendants, and in what was given to Moses and Jesus and to the prophets from their Lord. We make no distinction between any of them, and we are Muslims [submitting] to Him.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Water -->
+
+    <owl:Class rdf:about="&QuranicOntology;Water">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;Elements"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#WeatherPhenomena -->
+
+    <owl:Class rdf:about="&QuranicOntology;WeatherPhenomena">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;QuranNature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Women -->
+
+    <owl:Class rdf:about="&QuranicOntology;Women">
+        <rdfs:subClassOf rdf:resource="&QuranicOntology;HumanBeing"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Abraham -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Abraham">
+        <rdf:type rdf:resource="&QuranicOntology;Prophets"/>
+        <QuranicOntology:wasTrialedby rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:ancestorOf rdf:resource="&QuranicOntology;Imran"/>
+        <QuranicOntology:fatherOf rdf:resource="&QuranicOntology;Isaac"/>
+        <QuranicOntology:fatherOf rdf:resource="&QuranicOntology;Ishmael"/>
+        <QuranicOntology:ancestorOf rdf:resource="&QuranicOntology;Moses"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Adam -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Adam">
+        <rdf:type rdf:resource="&QuranicOntology;Prophets"/>
+        <QuranicOntology:ancestorOf rdf:resource="&QuranicOntology;Noah"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Allah -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Allah">
+        <rdf:type rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:chose rdf:resource="&QuranicOntology;Adam"/>
+        <QuranicOntology:favored rdf:resource="&QuranicOntology;ChildrenofIsrael"/>
+        <QuranicOntology:saved rdf:resource="&QuranicOntology;ChildrenofIsrael"/>
+        <QuranicOntology:sendsProvisionAs rdf:resource="&QuranicOntology;Cucumbers"/>
+        <QuranicOntology:causes rdf:resource="&QuranicOntology;Day"/>
+        <QuranicOntology:causes rdf:resource="&QuranicOntology;Death"/>
+        <QuranicOntology:originated rdf:resource="&QuranicOntology;Earth"/>
+        <QuranicOntology:chose rdf:resource="&QuranicOntology;FamilyofAbraham"/>
+        <QuranicOntology:chose rdf:resource="&QuranicOntology;FamilyofImran"/>
+        <QuranicOntology:sendsProvisionAs rdf:resource="&QuranicOntology;Food"/>
+        <QuranicOntology:sendsProvisionAs rdf:resource="&QuranicOntology;Garlic"/>
+        <QuranicOntology:sendsProvisionAs rdf:resource="&QuranicOntology;GreenHerbs"/>
+        <QuranicOntology:originated rdf:resource="&QuranicOntology;Heavens"/>
+        <QuranicOntology:created rdf:resource="&QuranicOntology;HumanBeing"/>
+        <QuranicOntology:trials rdf:resource="&QuranicOntology;HumanBeing"/>
+        <QuranicOntology:sendsProvisionAs rdf:resource="&QuranicOntology;Lentils"/>
+        <QuranicOntology:gives rdf:resource="&QuranicOntology;Life"/>
+        <QuranicOntology:secured rdf:resource="&QuranicOntology;Macca"/>
+        <QuranicOntology:sentDown rdf:resource="&QuranicOntology;Manna"/>
+        <QuranicOntology:madeAppoinmentWith rdf:resource="&QuranicOntology;Moses"/>
+        <QuranicOntology:askedRepentanceBy rdf:resource="&QuranicOntology;MosesFollowers"/>
+        <QuranicOntology:shaded rdf:resource="&QuranicOntology;MosesFollowers"/>
+        <QuranicOntology:raised rdf:resource="&QuranicOntology;Mount"/>
+        <QuranicOntology:sentDown rdf:resource="&QuranicOntology;Muhammad"/>
+        <QuranicOntology:causes rdf:resource="&QuranicOntology;Night"/>
+        <QuranicOntology:chose rdf:resource="&QuranicOntology;Noah"/>
+        <QuranicOntology:sendsProvisionAs rdf:resource="&QuranicOntology;Onions"/>
+        <QuranicOntology:drowned rdf:resource="&QuranicOntology;PeopleOfPharaoh"/>
+        <QuranicOntology:sent rdf:resource="&QuranicOntology;Prophets"/>
+        <QuranicOntology:sentDown rdf:resource="&QuranicOntology;PunishmentfromSky"/>
+        <QuranicOntology:sendsProvisionAs rdf:resource="&QuranicOntology;Quails"/>
+        <QuranicOntology:sentDown rdf:resource="&QuranicOntology;Quails"/>
+        <QuranicOntology:sends rdf:resource="&QuranicOntology;Rain"/>
+        <QuranicOntology:parted rdf:resource="&QuranicOntology;Sea"/>
+        <QuranicOntology:created rdf:resource="&QuranicOntology;SevenHeavens"/>
+        <QuranicOntology:sendsProvisionAs rdf:resource="&QuranicOntology;Shade"/>
+        <QuranicOntology:madeHumansAs rdf:resource="&QuranicOntology;SuccessiveAuthority"/>
+        <QuranicOntology:raises rdf:resource="&QuranicOntology;Sun"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#AlterationofDay -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;AlterationofDay">
+        <rdf:type rdf:resource="&QuranicOntology;AlterationofDay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#AlterationofNight -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;AlterationofNight">
+        <rdf:type rdf:resource="&QuranicOntology;AlterationofNight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Arafat -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Arafat"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Believers -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Believers">
+        <QuranicOntology:toEatFrom rdf:resource="&QuranicOntology;GoodThings"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Blood -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Blood">
+        <rdf:type rdf:resource="&QuranicOntology;ForbiddenFood"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Bones -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Bones">
+        <rdf:type rdf:resource="&QuranicOntology;BodyParts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Calf -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Calf">
+        <rdf:type rdf:resource="&QuranicOntology;Ungulates"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#ChildrenofIsrael -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;ChildrenofIsrael">
+        <rdf:type rdf:resource="&QuranicOntology;ChildrenofIsrael"/>
+        <QuranicOntology:werePunishedby rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:worshipped rdf:resource="&QuranicOntology;Calf"/>
+        <QuranicOntology:killed rdf:resource="&QuranicOntology;Prophets"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Cloud -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Cloud">
+        <rdf:type rdf:resource="&QuranicOntology;WeatherPhenomena"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#CreationofEarth -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;CreationofEarth">
+        <rdf:type rdf:resource="&QuranicOntology;CreationofEarth"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#CreationofHeavens -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;CreationofHeavens">
+        <rdf:type rdf:resource="&QuranicOntology;CreationofHeavens"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Cucumbers -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Cucumbers">
+        <rdf:type rdf:resource="&QuranicOntology;Fruits"/>
+        <rdf:type rdf:resource="&QuranicOntology;TreesandPlants"/>
+        <QuranicOntology:sentAsProvisionBy rdf:resource="&QuranicOntology;Allah"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Day -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Day">
+        <rdf:type rdf:resource="&QuranicOntology;MeasurementofTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Dead -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Dead">
+        <rdf:type rdf:resource="&QuranicOntology;BiologicalBeing"/>
+        <QuranicOntology:comesOutof rdf:resource="&QuranicOntology;LivingBeing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#DeadAnimals -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;DeadAnimals">
+        <rdf:type rdf:resource="&QuranicOntology;ForbiddenFood"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Death -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Death">
+        <rdf:type rdf:resource="&QuranicOntology;Death"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Disbelievers -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Disbelievers">
+        <rdf:type rdf:resource="&QuranicOntology;HumanBeing"/>
+        <QuranicOntology:werePunishedby rdf:resource="&QuranicOntology;NaturalDisasters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Donkey -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Donkey">
+        <rdf:type rdf:resource="&QuranicOntology;Donkey"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Drinks -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Drinks">
+        <rdf:type rdf:resource="&QuranicOntology;Drinks"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Earth -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Earth">
+        <rdf:type rdf:resource="&QuranicOntology;Earth"/>
+        <rdf:type rdf:resource="&QuranicOntology;Planets"/>
+        <QuranicOntology:belongTo rdf:resource="&QuranicOntology;Allah"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#East -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;East">
+        <rdf:type rdf:resource="&QuranicOntology;Directions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#FamilyofAbraham -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;FamilyofAbraham">
+        <rdf:type rdf:resource="&QuranicOntology;Families"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#FamilyofImran -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;FamilyofImran">
+        <rdf:type rdf:resource="&QuranicOntology;Families"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Fish -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Fish">
+        <rdf:type rdf:resource="&QuranicOntology;Fish"/>
+        <QuranicOntology:swallowed rdf:resource="&QuranicOntology;Yunus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Flesh -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Flesh">
+        <rdf:type rdf:resource="&QuranicOntology;BodyParts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Food -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Food"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Fruits -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Fruits">
+        <rdf:type rdf:resource="&QuranicOntology;Food"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Garlic -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Garlic">
+        <rdf:type rdf:resource="&QuranicOntology;Food"/>
+        <rdf:type rdf:resource="&QuranicOntology;TreesandPlants"/>
+        <QuranicOntology:sentAsProvisionBy rdf:resource="&QuranicOntology;Allah"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Gold -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Gold">
+        <rdf:type rdf:resource="&QuranicOntology;ChemicalElements"/>
+        <QuranicOntology:enjoymentOf rdf:resource="&QuranicOntology;Life"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#GoodThings -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;GoodThings"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#GreenHerbs -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;GreenHerbs">
+        <rdf:type rdf:resource="&QuranicOntology;Food"/>
+        <rdf:type rdf:resource="&QuranicOntology;GreenHerbs"/>
+        <QuranicOntology:sentAsProvisionBy rdf:resource="&QuranicOntology;Allah"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Heavens -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Heavens">
+        <rdf:type rdf:resource="&QuranicOntology;Heavens"/>
+        <QuranicOntology:belongTo rdf:resource="&QuranicOntology;Allah"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#HeavensandEarth -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;HeavensandEarth">
+        <rdf:type rdf:resource="&QuranicOntology;AstronomicalBodies"/>
+        <QuranicOntology:belongTo rdf:resource="&QuranicOntology;Allah"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Horses -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Horses">
+        <rdf:type rdf:resource="&QuranicOntology;Horses"/>
+        <QuranicOntology:enjoymentOf rdf:resource="&QuranicOntology;Life"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#HumanBeing -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;HumanBeing">
+        <rdf:type rdf:resource="&QuranicOntology;HumanBeing"/>
+        <QuranicOntology:formedIn rdf:resource="&QuranicOntology;Wombs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Humans -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Humans">
+        <QuranicOntology:willReturnTo rdf:resource="&QuranicOntology;Allah"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Imran -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Imran">
+        <rdf:type rdf:resource="&QuranicOntology;Men"/>
+        <QuranicOntology:fatherOf rdf:resource="&QuranicOntology;Mary"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Isaac -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Isaac">
+        <rdf:type rdf:resource="&QuranicOntology;Prophets"/>
+        <QuranicOntology:brotherOf rdf:resource="&QuranicOntology;Ishmael"/>
+        <QuranicOntology:fatherOf rdf:resource="&QuranicOntology;Jacob"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Ishmael -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Ishmael">
+        <rdf:type rdf:resource="&QuranicOntology;Prophets"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Jacob -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Jacob">
+        <rdf:type rdf:resource="&QuranicOntology;Prophets"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Jesus -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Jesus">
+        <rdf:type rdf:resource="&QuranicOntology;Prophets"/>
+        <QuranicOntology:wasSentto rdf:resource="&QuranicOntology;ChildrenofIsrael"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#John -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;John">
+        <rdf:type rdf:resource="&QuranicOntology;Prophets"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Lentils -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Lentils">
+        <rdf:type rdf:resource="&QuranicOntology;TreesandPlants"/>
+        <QuranicOntology:sentAsProvisionBy rdf:resource="&QuranicOntology;Allah"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Life -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Life">
+        <rdf:type rdf:resource="&QuranicOntology;Life"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#LivingBeing -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;LivingBeing">
+        <rdf:type rdf:resource="&QuranicOntology;BiologicalBeing"/>
+        <QuranicOntology:comesOutof rdf:resource="&QuranicOntology;Dead"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Macca -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Macca">
+        <rdf:type rdf:resource="&QuranicOntology;Cities"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Manna -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Manna">
+        <rdf:type rdf:resource="&QuranicOntology;Food"/>
+        <QuranicOntology:sentAsProvisionBy rdf:resource="&QuranicOntology;Allah"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Marwah -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Marwah">
+        <rdf:type rdf:resource="&QuranicOntology;Hills"/>
+        <rdf:type rdf:resource="&QuranicOntology;SymbolsofAllah"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Mary -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Mary">
+        <rdf:type rdf:resource="&QuranicOntology;Women"/>
+        <QuranicOntology:motherOf rdf:resource="&QuranicOntology;Jesus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Men -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Men">
+        <rdf:type rdf:resource="&QuranicOntology;Men"/>
+        <QuranicOntology:desire rdf:resource="&QuranicOntology;Gold"/>
+        <QuranicOntology:desire rdf:resource="&QuranicOntology;Horses"/>
+        <QuranicOntology:desire rdf:resource="&QuranicOntology;Silver"/>
+        <QuranicOntology:desire rdf:resource="&QuranicOntology;Sons"/>
+        <QuranicOntology:desire rdf:resource="&QuranicOntology;TilledLands"/>
+        <QuranicOntology:desire rdf:resource="&QuranicOntology;Women"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Moon -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Moon">
+        <rdf:type rdf:resource="&QuranicOntology;NaturalSatellites"/>
+        <QuranicOntology:usedToMeasure rdf:resource="&QuranicOntology;Time"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Moses -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Moses">
+        <rdf:type rdf:resource="&QuranicOntology;Prophets"/>
+        <QuranicOntology:wasAppointedBy rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:prayedFor rdf:resource="&QuranicOntology;Water"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#MosesFollowers -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;MosesFollowers">
+        <QuranicOntology:disbelieved rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:repentedTo rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:wereShadedBy rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:worshipped rdf:resource="&QuranicOntology;Calf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#MosesStaff -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;MosesStaff"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Mount -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Mount">
+        <rdf:type rdf:resource="&QuranicOntology;Mounts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#MovementofCloud -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;MovementofCloud">
+        <rdf:type rdf:resource="&QuranicOntology;MovementofCloud"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#MovementofCreatures -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;MovementofCreatures">
+        <rdf:type rdf:resource="&QuranicOntology;MovementofCreatures"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#MovementofWind -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;MovementofWind">
+        <rdf:type rdf:resource="&QuranicOntology;MovementofWInd"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Muhammad -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Muhammad">
+        <rdf:type rdf:resource="&QuranicOntology;Prophets"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#NaturalDisasters -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;NaturalDisasters">
+        <rdf:type rdf:resource="&QuranicOntology;NaturalDisasters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Night -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Night">
+        <rdf:type rdf:resource="&QuranicOntology;MeasurementofTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Noah -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Noah">
+        <rdf:type rdf:resource="&QuranicOntology;Prophets"/>
+        <QuranicOntology:ancestorOf rdf:resource="&QuranicOntology;Abraham"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Onions -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Onions">
+        <rdf:type rdf:resource="&QuranicOntology;TreesandPlants"/>
+        <QuranicOntology:sentAsProvisionBy rdf:resource="&QuranicOntology;Allah"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#People -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;People"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#PeopleOfPharaoh -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;PeopleOfPharaoh">
+        <rdf:type rdf:resource="&QuranicOntology;PeopleofPharaoh"/>
+        <QuranicOntology:wereDrownedBy rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:slaughtered rdf:resource="&QuranicOntology;ChildrenofIsrael"/>
+        <QuranicOntology:denied rdf:resource="&QuranicOntology;SignsofAllah"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Prophets -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Prophets">
+        <rdf:type rdf:resource="&QuranicOntology;Prophets"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#PunishmentfromSky -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;PunishmentfromSky">
+        <rdf:type rdf:resource="&QuranicOntology;PunishmentfromSky"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Quails -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Quails">
+        <rdf:type rdf:resource="&QuranicOntology;Food"/>
+        <rdf:type rdf:resource="&QuranicOntology;Quails"/>
+        <QuranicOntology:sentAsProvisionBy rdf:resource="&QuranicOntology;Allah"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Rain -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Rain">
+        <rdf:type rdf:resource="&QuranicOntology;WeatherPhenomena"/>
+        <QuranicOntology:givesLifeto rdf:resource="&QuranicOntology;Earth"/>
+        <QuranicOntology:produces rdf:resource="&QuranicOntology;Fruits"/>
+        <QuranicOntology:sentFrom rdf:resource="&QuranicOntology;Sky"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Rivers -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Rivers">
+        <rdf:type rdf:resource="&QuranicOntology;Rivers"/>
+        <QuranicOntology:burstFrom rdf:resource="&QuranicOntology;Stones"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Safa -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Safa">
+        <rdf:type rdf:resource="&QuranicOntology;Hills"/>
+        <rdf:type rdf:resource="&QuranicOntology;SymbolsofAllah"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Sea -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Sea">
+        <QuranicOntology:wasPartedBy rdf:resource="&QuranicOntology;Allah"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#SevenHeavens -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;SevenHeavens"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Shade -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Shade"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Sheep -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Sheep">
+        <rdf:type rdf:resource="&QuranicOntology;Sheep"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Ships -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Ships">
+        <QuranicOntology:sailsThrough rdf:resource="&QuranicOntology;Sea"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#SignsofAllah -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;SignsofAllah">
+        <rdf:type rdf:resource="&QuranicOntology;SignsofAllah"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Silver -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Silver">
+        <rdf:type rdf:resource="&QuranicOntology;ChemicalElements"/>
+        <QuranicOntology:enjoymentOf rdf:resource="&QuranicOntology;Life"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Sky -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Sky">
+        <rdf:type rdf:resource="&QuranicOntology;AstronomicalBodies"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Solomon -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Solomon">
+        <rdf:type rdf:resource="&QuranicOntology;Prophets"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Sons -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Sons">
+        <rdf:type rdf:resource="&QuranicOntology;Sons"/>
+        <QuranicOntology:enjoymentOf rdf:resource="&QuranicOntology;Life"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Stones -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Stones">
+        <rdf:type rdf:resource="&QuranicOntology;Stones"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#SuccessiveAuthority -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;SuccessiveAuthority"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Sun -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Sun">
+        <rdf:type rdf:resource="&QuranicOntology;Stars"/>
+        <QuranicOntology:risesFrom rdf:resource="&QuranicOntology;East"/>
+        <QuranicOntology:setsIn rdf:resource="&QuranicOntology;West"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Swines -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Swines">
+        <rdf:type rdf:resource="&QuranicOntology;ForbiddenFood"/>
+        <rdf:type rdf:resource="&QuranicOntology;Swines"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#TilledLands -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;TilledLands">
+        <rdf:type rdf:resource="&QuranicOntology;LandForms"/>
+        <QuranicOntology:enjoymentOf rdf:resource="&QuranicOntology;Life"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Time -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Time">
+        <rdf:type rdf:resource="&QuranicOntology;MeasurementofTime"/>
+        <QuranicOntology:measuredBy rdf:resource="&QuranicOntology;Moon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Torah -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Torah"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#TurSina -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;TurSina"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#TwelveSprings -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;TwelveSprings"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:102 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:102">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:102"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Solomon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:107 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:107">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:107"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Earth"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Heavens"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:116 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:116">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:116"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Earth"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Heavens"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:117 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:117">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:117"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Earth"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Heavens"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:119 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:119">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:119"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Muhammad"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:124 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:124">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:124"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Abraham"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Ishmael"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:126 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:126">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:126"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Fruits"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Macca"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:155 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:155">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:155"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;HumanBeing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:158 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:158">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:158"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Marwah"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Safa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:164 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:164">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:164"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;AlterationofDay"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;AlterationofNight"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Cloud"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;CreationofEarth"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;CreationofHeavens"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Earth"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;MovementofCloud"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;MovementofCreatures"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;MovementofWind"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Rain"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Wind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:171 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:171">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:171"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Sheep"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:172 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:172">
+        <QuranicOntology:mentionsAbout rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:mentionsAbout rdf:resource="&QuranicOntology;GoodThings"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:173 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:173">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:173"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:189 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:189">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:189"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Moon"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Time"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:198 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:198">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:198"/>
+        <QuranicOntology:mentionsAbout rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:mentionsAbout rdf:resource="&QuranicOntology;Arafat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:213 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:213">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:213"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Prophets"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:219 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:219">
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Wine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:22 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:22">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:22"/>
+        <QuranicOntology:mentionsAbout rdf:resource="&QuranicOntology;Allah"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:258 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:258">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:258"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Death"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Life"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:259 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:259">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:259"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Bones"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Donkey"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Drinks"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Flesh"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Food"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Time"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:284 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:284">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:284"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Earth"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Heavens"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:29 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:29">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:29"/>
+        <QuranicOntology:mentionsAbout rdf:resource="&QuranicOntology;Allah"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:30 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:30">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:30"/>
+        <QuranicOntology:mentionsAbout rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:mentionsAbout rdf:resource="&QuranicOntology;SuccessiveAuthority"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:40 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:40">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:40"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;ChildrenofIsrael"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:47 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:47">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:47"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;ChildrenofIsrael"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:49 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:49">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:49"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;ChildrenofIsrael"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;PeopleOfPharaoh"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:50 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:50">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:50"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;ChildrenofIsrael"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;PeopleOfPharaoh"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:51 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:51">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:51"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Calf"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;ChildrenofIsrael"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Moses"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:54 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:54">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:54"/>
+        <QuranicOntology:mentionsAbout rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:mentionsAbout rdf:resource="&QuranicOntology;Calf"/>
+        <QuranicOntology:mentionsAbout rdf:resource="&QuranicOntology;Moses"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:57 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:57">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:57"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;ChildrenofIsrael"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Manna"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Quails"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:59 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:59">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:59"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;PunishmentfromSky"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Sky"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:60 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:60">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:60"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Moses"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Water"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:61 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:61">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:61"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Cucumbers"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Earth"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Garlic"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;GreenHerbs"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Lentils"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Moses"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Onions"/>
+        <QuranicOntology:killed rdf:resource="&QuranicOntology;Prophets"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:63 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:63">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:63"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Mount"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:74 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:74">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:74"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Rivers"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Stones"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Water"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:92 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:92">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:92"/>
+        <QuranicOntology:mentionsAbout rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:mentionsAbout rdf:resource="&QuranicOntology;Calf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse2:93 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse2:93">
+        <rdf:type rdf:resource="&QuranicOntology;Verse2:93"/>
+        <QuranicOntology:mentionsAbout rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:mentionsAbout rdf:resource="&QuranicOntology;Calf"/>
+        <QuranicOntology:mentionsAbout rdf:resource="&QuranicOntology;Torah"/>
+        <QuranicOntology:mentionsAbout rdf:resource="&QuranicOntology;TurSina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse37:142 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse37:142">
+        <rdf:type rdf:resource="&QuranicOntology;Verse37:142"/>
+        <QuranicOntology:mentionsAbout rdf:resource="&QuranicOntology;Fish"/>
+        <QuranicOntology:mentionsAbout rdf:resource="&QuranicOntology;Yunus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:109 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse3:109">
+        <rdf:type rdf:resource="&QuranicOntology;Verse3:109"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Earth"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Heavens"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;HeavensandEarth"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:11 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse3:11">
+        <rdf:type rdf:resource="&QuranicOntology;Verse3:11"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;PeopleOfPharaoh"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:129 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse3:129">
+        <rdf:type rdf:resource="&QuranicOntology;Verse3:129"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Earth"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Heavens"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;HeavensandEarth"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:137 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse3:137">
+        <rdf:type rdf:resource="&QuranicOntology;Verse3:137"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Disbelievers"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;NaturalDisasters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:14 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse3:14">
+        <rdf:type rdf:resource="&QuranicOntology;Verse3:14"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Gold"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Horses"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Men"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Silver"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;TilledLands"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Women"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:180 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse3:180">
+        <rdf:type rdf:resource="&QuranicOntology;Verse3:180"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Earth"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Heavens"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;HeavensandEarth"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:27 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse3:27">
+        <rdf:type rdf:resource="&QuranicOntology;Verse3:27"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Dead"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;LivingBeing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:33 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse3:33">
+        <rdf:type rdf:resource="&QuranicOntology;Verse3:33"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Adam"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;FamilyofAbraham"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;FamilyofImran"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Noah"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:34 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse3:34">
+        <rdf:type rdf:resource="&QuranicOntology;Verse3:34"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:36 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse3:36">
+        <rdf:type rdf:resource="&QuranicOntology;Verse3:36"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Mary"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:37 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse3:37">
+        <rdf:type rdf:resource="&QuranicOntology;Verse3:37"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:39 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse3:39">
+        <rdf:type rdf:resource="&QuranicOntology;Verse3:39"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:45 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse3:45">
+        <rdf:type rdf:resource="&QuranicOntology;Verse3:45"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Jesus"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Mary"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:49 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse3:49">
+        <rdf:type rdf:resource="&QuranicOntology;Verse3:49"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;ChildrenofIsrael"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Jesus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:5 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse3:5">
+        <rdf:type rdf:resource="&QuranicOntology;Verse3:5"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Earth"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Heavens"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:6 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse3:6">
+        <rdf:type rdf:resource="&QuranicOntology;Verse3:6"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Allah"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;HumanBeing"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Wombs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:83 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse3:83">
+        <rdf:type rdf:resource="&QuranicOntology;Verse3:83"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Earth"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Heavens"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;HeavensandEarth"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Verse3:84 -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Verse3:84">
+        <rdf:type rdf:resource="&QuranicOntology;Verse3:84"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Abraham"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Isaac"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Ishmael"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Jacob"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Jesus"/>
+        <QuranicOntology:hasPart rdf:resource="&QuranicOntology;Moses"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Water -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Water">
+        <rdf:type rdf:resource="&QuranicOntology;Water"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#West -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;West">
+        <rdf:type rdf:resource="&QuranicOntology;Directions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Wind -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Wind">
+        <rdf:type rdf:resource="&QuranicOntology;WeatherPhenomena"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Wine -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Wine">
+        <rdf:type rdf:resource="&QuranicOntology;ForbiddenFood"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Wombs -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Wombs">
+        <rdf:type rdf:resource="&QuranicOntology;BodyParts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Women -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Women">
+        <rdf:type rdf:resource="&QuranicOntology;Women"/>
+        <QuranicOntology:enjoymentOf rdf:resource="&QuranicOntology;Life"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Yunus -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Yunus">
+        <QuranicOntology:wasSwallowedBy rdf:resource="&QuranicOntology;Fish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iiuc/QuranicOntology#Zakariyah -->
+
+    <owl:NamedIndividual rdf:about="&QuranicOntology;Zakariyah">
+        <rdf:type rdf:resource="&QuranicOntology;Prophets"/>
+        <QuranicOntology:fatherOf rdf:resource="&QuranicOntology;John"/>
+        <QuranicOntology:tookcareOf rdf:resource="&QuranicOntology;Mary"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
