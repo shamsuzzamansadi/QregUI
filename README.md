@@ -7,6 +7,10 @@ Our main KB is in OWL/RDF(Resource Description Framework). To extract the data's
 
 In Java to read, write and searching users question and getting it's answer using SPARQL we take the help of Apache Jena API.
 
+#Dependencies
+1. Apache Jena 3 API 
+2. JDK 8
+
 #Contributors:
 -------------
 In our early development special thanks to Towfique Anam Rine one of my research partner and close friend. Than as we proceed:
